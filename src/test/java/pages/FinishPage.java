@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.BaseTest;
+import util.Evento;
 
 public class FinishPage {
 
@@ -19,12 +19,12 @@ public class FinishPage {
     // MÉTODOS:
 
     public void clicarFinishBtn() {
-        BaseTest.click(finishBtn);
+        Evento.click(finishBtn);
     }
 
     // Validação:
     public String validarFinishComSucesso() {
-        return BaseTest.getText(msgFinishComSucesso);
+        return Evento.getText(msgFinishComSucesso);
     }
 
     //==================================================================================================================
@@ -40,7 +40,7 @@ public class FinishPage {
     // MÉTODOS:
 
     public void clicarCancelBtn() {
-        BaseTest.click(cancelBtn);
+        Evento.click(cancelBtn);
     }
 
 

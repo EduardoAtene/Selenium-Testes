@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.BaseTest;
+import util.Evento;
 
 public class CheckoutPage {
 
@@ -19,48 +19,40 @@ public class CheckoutPage {
     public static final By msgCheckout = By.cssSelector("#header_container > div.header_secondary_container > span");
     public static final By msgCheckoutError = By.cssSelector("#checkout_info_container > div > form > div.checkout_info > div.error-message-container.error > h3");
 
-    //==================================================================================================================
-
-    // MÉTODOS:
-
-    // Dados válidos:
     public void preencherFirstName() {
-        BaseTest.sendKeys(firstName, "Coraline");
+        Evento.sendKeys(firstName, "Coraline");
     }
 
     public void preencherLastName() {
-        BaseTest.sendKeys(lastName, "Jones");
+        Evento.sendKeys(lastName, "Jones");
     }
 
     public void preencherZipCode() {
-        BaseTest.sendKeys(zipCode, "12345");
+        Evento.sendKeys(zipCode, "12345");
     }
 
-    // Dados inexistentes:
     public void preencherFirstNameVazio() {
-        BaseTest.sendKeys(firstName, "");
+        Evento.sendKeys(firstName, "");
     }
 
     public void preencherLastNameVazio() {
-        BaseTest.sendKeys(lastName, "");
+        Evento.sendKeys(lastName, "");
     }
 
     public void preencherZipCodeVazio() {
-        BaseTest.sendKeys(zipCode, "");
+        Evento.sendKeys(zipCode, "");
     }
 
-    // Botão:
     public void clicarContinueBtn() {
-        BaseTest.click(continueBtn);
+        Evento.click(continueBtn);
     }
 
-    // Validações:
     public String validarCheckoutComSucesso() {
-        return BaseTest.getText(msgCheckout);
+        return Evento.getText(msgCheckout);
     }
 
     public String validarCheckoutSemSucesso() {
-        return BaseTest.getText(msgCheckoutError);
+        return Evento.getText(msgCheckoutError);
     }
 
 }

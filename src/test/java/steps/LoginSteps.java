@@ -2,24 +2,14 @@ package steps;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
 
 import pages.LoginPage;
-import util.BaseTest;
-import util.Browser;
 import util.BrowserEdge;
 
 public class LoginSteps extends BrowserEdge {
 
     LoginPage loginPage = new LoginPage();
 
-    //==================================================================================================================
-    //
-    //                                            LOGIN PAGE | Login
-    //
-    //==================================================================================================================
-    // ID:     01
-    // TÍTULO: Realizar login COM SUCESSO
 
     @Test
     public void efetuarLoginComSucesso1() {
@@ -50,9 +40,6 @@ public class LoginSteps extends BrowserEdge {
         Assert.assertEquals(loginPage.validarLoginComSucesso(), "Products");
     }
 
-    //==================================================================================================================
-    // ID:     02
-    // TÍTULO: Realizar login SEM SUCESSO - Campos em branco
 
     @Test
     public void efetuarLoginSemSucessoCamposEmBranco() {
@@ -65,9 +52,6 @@ public class LoginSteps extends BrowserEdge {
     }
 
 
-    //==================================================================================================================
-    // ID:     03
-    // TÍTULO: Realizar login SEM SUCESSO - Campo "Username" em branco
 
     @Test
     public void efetuarLoginSemSucessoUsernameEmBranco() {
@@ -79,9 +63,6 @@ public class LoginSteps extends BrowserEdge {
         Assert.assertEquals(loginPage.validarLoginSemSucesso(), "Epic sadface: Username is required");
     }
 
-    //==================================================================================================================
-    // ID:     04
-    // TÍTULO: Realizar login SEM SUCESSO - Campo "Password" em branco
 
     @Test
     public void efetuarLoginSemSucessoPasswordEmBranco() {
@@ -93,9 +74,6 @@ public class LoginSteps extends BrowserEdge {
         Assert.assertEquals(loginPage.validarLoginSemSucesso(), "Epic sadface: Password is required");
     }
 
-    //==================================================================================================================
-    // ID:     05
-    // TÍTULO: Realizar login SEM SUCESSO - Campo "Username" incorreto
 
     @Test
     public void efetuarLoginSemSucessoUsernameIncorreto() {
@@ -107,9 +85,7 @@ public class LoginSteps extends BrowserEdge {
         Assert.assertEquals(loginPage.validarLoginSemSucesso(), "Epic sadface: Username and password do not match any user in this service");
     }
 
-    //==================================================================================================================
-    // ID:     06
-    // TÍTULO: Realizar login SEM SUCESSO - Campo "Password" incorreto
+
 
     @Test
     public void efetuarLogiSemSucessoPasswordIncorreto() {
@@ -121,9 +97,6 @@ public class LoginSteps extends BrowserEdge {
         Assert.assertEquals(loginPage.validarLoginSemSucesso(), "Epic sadface: Username and password do not match any user in this service");
     }
 
-    //==================================================================================================================
-    // ID:     07
-    // TÍTULO: Realizar login SEM SUCESSO - Usuário bloqueado
 
     @Test
     public void efetuarLoginSemSucessoUsuarioBloqueado() {
@@ -134,7 +107,5 @@ public class LoginSteps extends BrowserEdge {
 
         Assert.assertEquals(loginPage.validarLoginSemSucesso(), "Epic sadface: Sorry, this user has been locked out.");
     }
-
-    //==================================================================================================================
 
 }

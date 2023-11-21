@@ -1,17 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.BaseTest;
+import util.Evento;
 
 public class InventoryPage {
 
-    //==================================================================================================================
-    //                                            Inventory Page
-    //==================================================================================================================
-
-    // FUNCIONALIDADE MENU
-
-    // Declaração de campos de interação:
 
     public static final By mnuPageOpen = By.cssSelector("#react-burger-menu-btn");
     public static final By mnuPageClose = By.cssSelector("#react-burger-cross-btn");
@@ -55,25 +48,29 @@ public class InventoryPage {
     // Métodos:
 
     public void clicarDdlFilter() {
-        BaseTest.click(ddlFilter);
+        Evento.click(ddlFilter);
     }
+
     public void selecionarFilterNameAToZ() {
-        BaseTest.click(ddlFilterNameAToZ);
+        Evento.click(ddlFilterNameAToZ);
     }
+
     public void selecionarFilterNameZToA() {
-        BaseTest.click(ddlFilterNameZToA);
+        Evento.click(ddlFilterNameZToA);
     }
+
     public void selecionarFilterPriceLowToHigh() {
-        BaseTest.click(ddlFilterPriceLowToHigh);
+        Evento.click(ddlFilterPriceLowToHigh);
     }
+
     public void selecionarFilterPriceHighToLow() {
-        BaseTest.click(ddlFilterPriceHighToLow);
+        Evento.click(ddlFilterPriceHighToLow);
     }
 
     // Validações:
 
     // public String validarBuscaComSucesso() {
-        // return BaseTest.getText(produtoBusca);
+    // return BaseTest.getText(produtoBusca);
     // }
 
     //==================================================================================================================
@@ -97,39 +94,35 @@ public class InventoryPage {
     // Métodos:
 
     public void clicarAddBackpack() {
-        BaseTest.click(addBackpackBtn);
+        Evento.click(addBackpackBtn);
     }
+
     public void clicarAddTShirt() {
-        BaseTest.click(addTShirtBtn);
+        Evento.click(addTShirtBtn);
     }
+
     public void clicarAddOnesie() {
-        BaseTest.click(addOnesieBtn);
+        Evento.click(addOnesieBtn);
     }
+
     public void clicarAddBikeLight() {
-        BaseTest.click(addBikeLightBtn);
+        Evento.click(addBikeLightBtn);
     }
+
     public void clicarAddJacket() {
-        BaseTest.click(addJacketBtn);
+        Evento.click(addJacketBtn);
     }
+
     public void clicarAddRedTShirt() {
-        BaseTest.click(addRedTShirtBtn);
+        Evento.click(addRedTShirtBtn);
     }
+
     public void clicarCart() {
-        BaseTest.click(cartBtn);
+        Evento.click(cartBtn);
     }
 
-    // Validação:
     public String validarQuantidadeComSucesso() {
-        return BaseTest.getText(quantidadeCarrinho);
+        return Evento.getText(quantidadeCarrinho);
     }
 
-    //==================================================================================================================
-
-    // FUNCIONALIDADE CARRINHO - REMOVER PRODUTO DO CARRINHO ATRAVÉS DA PÁGINA INVENTORY
-
-    //==================================================================================================================
-
-    // VER DETALHE DE PRODUTO (Ver preço / Ver nome / Ver descrição / Navegar Back to Products / Add to cart / Remove)
-
-    //==================================================================================================================
 }

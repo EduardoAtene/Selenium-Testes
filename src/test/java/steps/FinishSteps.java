@@ -20,11 +20,6 @@ public class FinishSteps extends BrowserEdge {
     CheckoutPage checkoutPage = new CheckoutPage();
 
     FinishPage finishPage = new FinishPage();
-
-    //==================================================================================================================
-    //                                                  FINISH
-    //==================================================================================================================
-    // CADASTRO CHECKOUT COM SUCESSO
     @Test
     public void finalizarCompraComSucesso() {
 
@@ -46,9 +41,7 @@ public class FinishSteps extends BrowserEdge {
         checkoutPage.clicarContinueBtn();
 
         finishPage.clicarFinishBtn();
-
-        // Validação:
-        Assert.assertEquals(finishPage.validarFinishComSucesso(), "Deu bom");
+        Assert.assertEquals(finishPage.validarFinishComSucesso(), "Thank you for your order!");
     }
 
 }

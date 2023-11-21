@@ -1,15 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.BaseTest;
+import util.Evento;
 
 public class CartPage {
 
-    //==================================================================================================================
-    //                                        Página Cart | REMOVE FROM CART
-    //==================================================================================================================
-
-    // DECLARAÇÃO DOS CAMPOS:
 
     public static final By removeBackpackBtn = By.cssSelector("#remove-sauce-labs-backpack");
     public static final By removeTShirtBtn = By.cssSelector("#remove-sauce-labs-bolt-t-shirt");
@@ -19,40 +14,37 @@ public class CartPage {
 
     public static final By cartBtn = By.cssSelector("#shopping_cart_container > a > span");
 
-    // Validação:
     public static final By quantidadeCarrinho = By.cssSelector("#shopping_cart_container > a > span");
 
     //==================================================================================================================
 
-    // MÉTODOS:
 
     public void clicarRemoveBackpack() {
-        BaseTest.click(removeBackpackBtn);
+        Evento.click(removeBackpackBtn);
     }
 
     public void clicarRemoveTShirt() {
-        BaseTest.click(removeTShirtBtn);
+        Evento.click(removeTShirtBtn);
     }
 
     public void clicarRemoveOnesie() {
-        BaseTest.click(removeOnesieBtn);
+        Evento.click(removeOnesieBtn);
     }
 
     public void clicarRemoveBikeLight() {
-        BaseTest.click(removeBikeLightBtn);
+        Evento.click(removeBikeLightBtn);
     }
 
     public void clicarRemoveJacket() {
-        BaseTest.click(removeJacketBtn);
+        Evento.click(removeJacketBtn);
     }
 
     public void clicarCart() {
-        BaseTest.click(cartBtn);
+        Evento.click(cartBtn);
     }
 
-    // Validação:
     public String validarQuantidadeRemovidaComSucesso() {
-        return BaseTest.getText(quantidadeCarrinho);
+        return Evento.getText(quantidadeCarrinho);
     }
 
     public String validarQuantidadeRemovidaSemSucesso() {
@@ -60,43 +52,22 @@ public class CartPage {
     }
 
 
-    //==================================================================================================================
-    //                                       Página Cart | CONTINUE SHOPPING
-    //==================================================================================================================
-
-    // DECLARAÇÃO DOS CAMPOS:
-
     public static final By continueShoppingBtn = By.cssSelector("#continue-shopping");
 
-    //==================================================================================================================
-
-    // MÉTODOS:
-
     public void clicarContinueShoppingBtn() {
-        BaseTest.click(continueShoppingBtn);
+        Evento.click(continueShoppingBtn);
     }
 
-
-    //==================================================================================================================
-    //                                       Página Cart | EFETUAR CHECKOUT
-    //==================================================================================================================
-
-    // DECLARAÇÃO DOS CAMPOS:
 
     public static final By checkoutBtn = By.cssSelector("#checkout");
     public static final By msgCheckoutComSucesso = By.cssSelector("#header_container > div.header_secondary_container > span");
 
-    //==================================================================================================================
-
-    // MÉTODOS:
-
     public void clicarCheckoutBtn() {
-        BaseTest.click(checkoutBtn);
+        Evento.click(checkoutBtn);
     }
 
-    // Validação:
     public String validarCheckoutComSucesso() {
-        return BaseTest.getText(msgCheckoutComSucesso);
+        return Evento.getText(msgCheckoutComSucesso);
     }
 
 }

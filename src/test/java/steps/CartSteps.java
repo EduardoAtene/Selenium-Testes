@@ -15,12 +15,6 @@ public class CartSteps extends BrowserEdge {
 
     InventoryPage inventoryPage = new InventoryPage();
 
-    //==================================================================================================================
-    //                                              REMOVE FROM CART
-    //==================================================================================================================
-
-    // REMOVER 5 PRODUTOS DO CARRINHO COM SUCESSO
-
     @Test
     public void RemoverProdutosComSucesso() {
 
@@ -41,13 +35,9 @@ public class CartSteps extends BrowserEdge {
 
         cartPage.clicarCart();
 
-        // Validação:
         Assert.assertEquals(cartPage.validarQuantidadeRemovidaComSucesso(), "1");
     }
 
-    //==================================================================================================================
-
-    // REMOVER PRODUTOS DO CARRINHO SEM SUCESSO
     @Test
     public void adicionarTodosProdutosSemSucesso() {
 
@@ -69,15 +59,9 @@ public class CartSteps extends BrowserEdge {
 
         cartPage.clicarCart();
 
-        // Validação:
         Assert.assertEquals(cartPage.validarQuantidadeRemovidaSemSucesso(), "6");
     }
 
-    //==================================================================================================================
-    //                                  SEGUE A COMPRA COM A QUANTIDADE SELECIONADA
-    //==================================================================================================================
-
-    // SEGUE A COMPRA COM SUCESSO:
     public void ProcedeCheckoutComSucesso() {
 
         loginSteps.efetuarLoginComSucesso1();
@@ -91,10 +75,6 @@ public class CartSteps extends BrowserEdge {
         inventoryPage.clicarCart();
 
         cartPage.clicarCheckoutBtn();
-
-        // Validação:
-        // Assert.assertEquals(cartPage.validarCheckoutComSucesso(), "CHECKOUT: YOUR INFORMATION");
-        // Isso ta dando pau, não da tempo para arrumar
     }
 
 }

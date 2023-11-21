@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.BaseTest;
+import util.Evento;
 
 public class LoginPage {
 
@@ -25,45 +25,45 @@ public class LoginPage {
     // MÉTODOS:
 
     // Preencher com dados válidos:
-    public void preencherUsernameCorreto1() { BaseTest.sendKeys(frmUsername, "standard_user"); }
-    public void preencherUsernameCorreto2() { BaseTest.sendKeys(frmUsername, "problem_user"); }
-    public void preencherUsernameCorreto3() { BaseTest.sendKeys(frmUsername, "performance_glitch_user"); }
+    public void preencherUsernameCorreto1() { Evento.sendKeys(frmUsername, "standard_user"); }
+    public void preencherUsernameCorreto2() { Evento.sendKeys(frmUsername, "problem_user"); }
+    public void preencherUsernameCorreto3() { Evento.sendKeys(frmUsername, "performance_glitch_user"); }
     public void preencherPasswordCorreto() {
-        BaseTest.sendKeys(frmPassword, "secret_sauce");
+        Evento.sendKeys(frmPassword, "secret_sauce");
     }
 
     //------------------------------------------------------------------------------------------------------------------
 
     // Preencher com dados incorretos / inválidos / em branco:
     public void preencherUsernameIncorreto() {
-        BaseTest.sendKeys(frmUsername, "UsernameIncorreto");
+        Evento.sendKeys(frmUsername, "UsernameIncorreto");
     }
     public void preencherPasswordIncorreto() {
-        BaseTest.sendKeys(frmPassword, "PasswordIncorreto");
+        Evento.sendKeys(frmPassword, "PasswordIncorreto");
     }
     public void preencherUsernameVazio() {
-        BaseTest.sendKeys(frmUsername, "");
+        Evento.sendKeys(frmUsername, "");
     }
     public void preencherPasswordVazio() {
-        BaseTest.sendKeys(frmPassword, "");
+        Evento.sendKeys(frmPassword, "");
     }
-    public void preencherUsernameBloqueado() { BaseTest.sendKeys(frmUsername, "locked_out_user"); }
+    public void preencherUsernameBloqueado() { Evento.sendKeys(frmUsername, "locked_out_user"); }
 
     //------------------------------------------------------------------------------------------------------------------
 
     // Efetuar Login:
     public void clicarLoginBtn() {
-        BaseTest.click(btnLogin);
+        Evento.click(btnLogin);
     }
 
     //------------------------------------------------------------------------------------------------------------------
 
     // Validações:
     public String validarLoginComSucesso() {
-        return BaseTest.getText(mnuProducts);
+        return Evento.getText(mnuProducts);
     }
     public String validarLoginSemSucesso() {
-        return BaseTest.getText(lblIncorrectLogin);
+        return Evento.getText(lblIncorrectLogin);
     }
 
     //------------------------------------------------------------------------------------------------------------------
