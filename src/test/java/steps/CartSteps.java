@@ -62,6 +62,7 @@ public class CartSteps extends BrowserEdge {
         Assert.assertEquals(cartPage.validarQuantidadeRemovidaSemSucesso(), "6");
     }
 
+    @Test
     public void ProcedeCheckoutComSucesso() {
 
         loginSteps.efetuarLoginComSucesso1();
